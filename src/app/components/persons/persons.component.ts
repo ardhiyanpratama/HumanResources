@@ -18,6 +18,7 @@ export class PersonsComponent implements OnInit {
     const localData = localStorage.getItem('personList');
     if (localData != null) {
       this.persons = JSON.parse(localData);
+      console.log("main", this.persons)
     }
     else{
       this.personService.getAllPersons()
@@ -25,6 +26,7 @@ export class PersonsComponent implements OnInit {
         next:(persons)=>{
           this.persons = persons;
           localStorage.setItem('personList', JSON.stringify(persons));
+          console.log("main data", this.persons)
         },
         error:(response)=>{
           console.log(response);

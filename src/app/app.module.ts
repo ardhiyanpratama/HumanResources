@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { PersonsComponent } from './components/persons/persons.component';
 import { AddPersonComponent } from './components/add-person/add-person.component';
 import { AgePipe } from './pipe/age.pipe';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { AgePipe } from './pipe/age.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
